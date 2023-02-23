@@ -7,6 +7,10 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
 app = Flask(__name__)
 
+dotenv.load_dotenv() # .env ファイルを読み込む
+TOKEN = os.getenv('TOKEN') # .env内の環境変数を取得
+SECRET = os.getenv('SECRET')
+
 # LINE Messaging APIの設定
 line_bot_api = LineBotApi(process.env.CHANNEL_SECRET)
 handler = WebhookHandler(process.env.CHANNEL_ACCESS_TOKEN)
