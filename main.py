@@ -7,13 +7,9 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
 app = Flask(__name__)
 
-dotenv.load_dotenv() # .env ファイルを読み込む
-TOKEN = os.getenv('TOKEN') # .env内の環境変数を取得
-SECRET = os.getenv('SECRET')
-
 # LINE Messaging APIの設定
-line_bot_api = LineBotApi(process.env.CHANNEL_SECRET)
-handler = WebhookHandler(process.env.CHANNEL_ACCESS_TOKEN)
+line_bot_api = LineBotApi("4e246a9f3fccee421a773aa69cf544a2")
+handler = WebhookHandler("nywDKY2yyWorcevU2bDOlTzV1GhiM8oAJXA3kLlGqHKrVm4mykKQGxdcyCCa1//UvuNv7Khi/ChLjTP+rE+gYBatirfaUrAftyOsmSMridtHG313kThX3nq9j0f1fvj6c+YV4BrXG+75g4z8orPT8wdB04t89/1O/w1cDnyilFU=")
 
 # 数式の問題を生成する関数
 def generate_algebra_problems():
