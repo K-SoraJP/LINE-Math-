@@ -7,9 +7,6 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
 app = Flask(__name__)
 
-os.environ['token'] = 'nywDKY2yyWorcevU2bDOlTzV1GhiM8oAJXA3kLlGqHKrVm4mykKQGxdcyCCa1//UvuNv7Khi/ChLjTP+rE+gYBatirfaUrAftyOsmSMridtHG313kThX3nq9j0f1fvj6c+YV4BrXG+75g4z8orPT8wdB04t89/1O/w1cDnyilFU='
-os.environ['secret'] = '4e246a9f3fccee421a773aa69cf544a2'
-
 # LINE Messaging APIの設定
 line_bot_api = LineBotApi(os.environ['token'])
 handler = WebhookHandler(os.environ['secret'])
