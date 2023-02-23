@@ -186,8 +186,4 @@ def handle_message(event):
         ]
     )
 
-if __name__ == "__main__":
-    # Flaskアプリケーションを起動
-    app.run()
-
 
