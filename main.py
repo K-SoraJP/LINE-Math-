@@ -8,8 +8,8 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage
 app = Flask(__name__)
 
 # LINE Messaging APIの設定
-line_bot_api = LineBotApi(os.environ['token'])
-handler = WebhookHandler(os.environ['secret'])
+line_bot_api = LineBotApi(process.env.CHANNEL_SECRET)
+handler = WebhookHandler(process.env.CHANNEL_ACCESS_TOKEN)
 
 # 数式の問題を生成する関数
 def generate_algebra_problems():
