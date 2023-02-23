@@ -1,3 +1,2 @@
 line-bot-sdk
-flask
-random
+flask==	2.2.2
